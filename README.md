@@ -13,19 +13,6 @@
   No internet needed • One-time payment • Works on school's local network
 </p>
 
----
-
-## 📸 Screenshots
-
-| Dashboard | Fees Management |
-|-----------|----------------|
-| ![Dashboard](screenshots/dashboard.png) | ![Fees](screenshots/fees.png) |
-
-| Report Card PDF | Class Management |
-|----------------|-----------------|
-| ![Report Card](screenshots/reportcard.png) | ![Classes](screenshots/classes.png) |
-
----
 
 ## ✨ Features
 
@@ -318,3 +305,4 @@ This project is licensed under the MIT License.
   Made with ❤️ for Indian Schools 🇮🇳<br>
   <b>ShalaConnect — Empowering Indian Schools with Technology</b>
 </p>
+
