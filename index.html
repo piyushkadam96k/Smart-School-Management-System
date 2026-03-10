@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShalaConnect — Smart School Management</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --blue: #00d4ff;
+      --green: #00ff9d;
+    }
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+      scroll-behavior: smooth;
+    }
+    .glass {
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+    .hero {
+      background: linear-gradient(135deg, #0a1428 0%, #000811 100%);
+    }
+    .nav-scrolled {
+      background: rgba(10, 20, 40, 0.97) !important;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px -10px rgba(0, 212, 255, 0.18);
+    }
+    .feature-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px -12px rgba(0, 212, 255, 0.22);
+    }
+    .cta-button {
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px) scale(1.03);
+    }
+    .dashboard {
+      border-radius: 24px;
+      background: linear-gradient(145deg, #111827, #1f2937);
+      box-shadow: 0 25px 60px -15px rgb(0 0 0 / 55%);
+    }
+    .section-title {
+      font-size: clamp(2.5rem, 6vw, 3.8rem);
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+    @media (max-width: 640px) {
+      .px-6 { padding-left: 1.25rem; padding-right: 1.25rem; }
+      .py-28 { padding-top: 5rem; padding-bottom: 5rem; }
+      .text-6xl { font-size: 2.8rem; }
+      .text-8xl { font-size: 3.8rem; }
+      .cta-button { padding: 1rem 1.8rem; font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body class="bg-[#05070f] text-white min-h-screen overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#05070f]/85 backdrop-blur-xl border-b border-white/8 transition-all duration-300">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-8 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3 sm:gap-4">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-[#00d4ff] to-[#00ff9d] rounded-2xl flex items-center justify-center shadow-lg shadow-[#00d4ff]/25">
+          <i class="fa-solid fa-school text-2xl sm:text-3xl text-black"></i>
+        </div>
+        <div class="text-3xl sm:text-4xl font-semibold tracking-tight">
+          Shala<span class="text-[#00d4ff]">Connect</span>
+        </div>
+      </div>
+      
+      <div class="hidden md:flex items-center gap-8 lg:gap-10 text-base font-medium">
+        <a href="#features" class="hover:text-[#00d4ff] transition-colors">Features</a>
+        <a href="#how" class="hover:text-[#00d4ff] transition-colors">How it Works</a>
+        <a href="#why" class="hover:text-[#00d4ff] transition-colors">Why Us</a>
+      </div>
+      
+      <a href="https://wa.me/917829396954?text=Hello%20ShalaConnect%20Team%2C%20I%20would%20like%20a%20free%20demo%20and%20pricing%20information%20for%20my%20school"
+         target="_blank" rel="noopener"
+         class="cta-button px-6 py-3.5 sm:px-8 sm:py-4 bg-[#00ff9d] text-black font-semibold rounded-2xl sm:rounded-3xl flex items-center gap-2.5 sm:gap-3 shadow-xl shadow-[#00ff9d]/30 text-sm sm:text-base">
+        <i class="fa-brands fa-whatsapp text-xl sm:text-2xl"></i>
+        Free Demo
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero min-h-screen flex items-center pt-20 sm:pt-28 pb-16">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-8 grid md:grid-cols-12 gap-10 sm:gap-16 items-center">
+      <div class="md:col-span-7" data-aos="fade-right" data-aos-duration="800">
+        <h1 class="text-5xl sm:text-6xl md:text-8xl leading-tight font-bold tracking-tight mb-5 sm:mb-7">
+          The smartest way<br>to run your school
+        </h1>
+        
+        <p class="text-xl sm:text-2xl text-gray-300 mb-8 sm:mb-12 leading-relaxed">
+          Complete school management • Zero monthly fees<br class="hidden sm:inline">
+          Works offline • One-time payment only
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+          <a href="https://wa.me/917829396954?text=Hello%20ShalaConnect%20Team%2C%20please%20send%20me%20the%2090-second%20demo%20video%20for%20my%20school"
+             target="_blank" rel="noopener"
+             class="cta-button px-8 py-5 bg-white text-black font-semibold text-lg sm:text-xl rounded-2xl sm:rounded-3xl flex items-center justify-center gap-3 shadow-lg">
+            <i class="fa-solid fa-play"></i> Watch Demo
+          </a>
+          
+          <a href="https://wa.me/917829396954?text=Hi%20Team%2C%20I%20want%20a%20personal%20demo%20and%20pricing%20for%20my%20school"
+             target="_blank" rel="noopener"
+             class="cta-button px-8 py-5 border-2 border-[#00ff9d] font-semibold text-lg sm:text-xl rounded-2xl sm:rounded-3xl flex items-center justify-center gap-3 hover:bg-[#00ff9d]/10">
+            <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="mt-10 sm:mt-16 flex flex-wrap gap-6 sm:gap-12 text-sm sm:text-base opacity-90">
+          <div class="flex items-center gap-2.5">
+            <i class="fa-solid fa-check text-[#00ff9d]"></i> One-time payment
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i class="fa-solid fa-check text-[#00ff9d]"></i> 100% offline
+          </div>
+        </div>
+      </div>
+      
+      <div class="md:col-span-5 relative mt-10 md:mt-0" data-aos="fade-left" data-aos-duration="900">
+        <div class="dashboard p-3 sm:p-4 mx-auto max-w-[380px] sm:max-w-[460px]">
+          <div class="bg-[#0a0f1c] px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between rounded-t-2xl sm:rounded-t-3xl text-sm sm:text-base">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-[#00d4ff] to-[#00ff9d] rounded-xl flex items-center justify-center text-black text-lg sm:text-xl">🏫</div>
+              <div>
+                <div class="font-semibold">Demo School</div>
+                <div class="text-xs text-gray-400">312 students</div>
+              </div>
+            </div>
+            <div class="px-3 sm:px-5 py-1 bg-[#00ff9d]/10 text-[#00ff9d] text-xs font-medium rounded-2xl">98% Attendance</div>
+          </div>
+          
+          <div class="grid grid-cols-3 gap-2.5 sm:gap-3 p-4 sm:p-6 bg-[#111827] text-sm sm:text-base">
+            <div class="glass rounded-2xl p-3 sm:p-5 text-center">
+              <div class="text-2xl sm:text-4xl font-semibold text-[#00ff9d]">₹1.8L</div>
+              <div class="text-xs mt-1 text-gray-400">Fees</div>
+            </div>
+            <div class="glass rounded-2xl p-3 sm:p-5 text-center">
+              <div class="text-2xl sm:text-4xl font-semibold text-white">41</div>
+              <div class="text-xs mt-1 text-gray-400">Pending</div>
+            </div>
+            <div class="glass rounded-2xl p-3 sm:p-5 text-center">
+              <div class="text-2xl sm:text-4xl font-semibold text-[#00d4ff]">12</div>
+              <div class="text-xs mt-1 text-gray-400">New</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-20 sm:py-28 bg-gradient-to-b from-[#05070f] to-[#0a0f1f]">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-8">
+      <h2 class="section-title text-center mb-12 sm:mb-16">Everything your school needs</h2>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="feature-card glass rounded-3xl p-7 sm:p-10" data-aos="fade-up">
+          <div class="text-5xl sm:text-6xl mb-5 sm:mb-6">💰</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-3">Smart Fees</h3>
+          <p class="text-gray-400 text-sm sm:text-base">Track payments • Reminders • Defaulter list</p>
+        </div>
+        <div class="feature-card glass rounded-3xl p-7 sm:p-10" data-aos="fade-up" data-aos-delay="80">
+          <div class="text-5xl sm:text-6xl mb-5 sm:mb-6">📄</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-3">Auto Report Cards</h3>
+          <p class="text-gray-400 text-sm sm:text-base">PDF in seconds • Any board</p>
+        </div>
+        <div class="feature-card glass rounded-3xl p-7 sm:p-10" data-aos="fade-up" data-aos-delay="160">
+          <div class="text-5xl sm:text-6xl mb-5 sm:mb-6">📱</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-3">WhatsApp Alerts</h3>
+          <p class="text-gray-400 text-sm sm:text-base">Fees • Results • Attendance</p>
+        </div>
+        <div class="feature-card glass rounded-3xl p-7 sm:p-10" data-aos="fade-up">
+          <div class="text-5xl sm:text-6xl mb-5 sm:mb-6">🏫</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-3">Class & Exam Mgmt</h3>
+          <p class="text-gray-400 text-sm sm:text-base">Students, subjects, marks, timetable</p>
+        </div>
+        <div class="feature-card glass rounded-3xl p-7 sm:p-10" data-aos="fade-up" data-aos-delay="80">
+          <div class="text-5xl sm:text-6xl mb-5 sm:mb-6">🔒</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-3">Fully Offline</h3>
+          <p class="text-gray-400 text-sm sm:text-base">Data stays in your school computer</p>
+        </div>
+        <div class="feature-card glass rounded-3xl p-7 sm:p-10" data-aos="fade-up" data-aos-delay="160">
+          <div class="text-5xl sm:text-6xl mb-5 sm:mb-6">⚡</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-3">Very Easy to Use</h3>
+          <p class="text-gray-400 text-sm sm:text-base">30-min training • Anyone can use</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="py-20 sm:py-28 bg-[#05070f]">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-8">
+      <h2 class="section-title text-center mb-12 sm:mb-16">Ready in just one day</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8 sm:gap-12 max-w-5xl mx-auto">
+        <div class="text-center" data-aos="fade-up">
+          <div class="mx-auto w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#00d4ff] to-[#00ff9d] text-black rounded-3xl flex items-center justify-center text-4xl sm:text-5xl mb-6">1</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-4">We Install</h3>
+          <p class="text-gray-400 text-sm sm:text-base">2 hours on your computer</p>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="mx-auto w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#00d4ff] to-[#00ff9d] text-black rounded-3xl flex items-center justify-center text-4xl sm:text-5xl mb-6">2</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-4">We Train</h3>
+          <p class="text-gray-400 text-sm sm:text-base">30-minute session for your team</p>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="mx-auto w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#00d4ff] to-[#00ff9d] text-black rounded-3xl flex items-center justify-center text-4xl sm:text-5xl mb-6">3</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-4">You Run</h3>
+          <p class="text-gray-400 text-sm sm:text-base">Fully digital from day one</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why" class="py-20 sm:py-28 bg-[#0a0f1f]">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-8">
+      <div class="grid md:grid-cols-12 gap-12 sm:gap-16 items-center">
+        <div class="md:col-span-5" data-aos="fade-right">
+          <h2 class="section-title">Why schools choose ShalaConnect</h2>
+          <div class="mt-8 sm:mt-10 space-y-6 sm:space-y-8">
+            <div class="flex gap-4 sm:gap-5">
+              <div class="text-3xl sm:text-4xl text-[#00ff9d]">01</div>
+              <div><div class="font-semibold">One-time payment</div><div class="text-gray-400 text-sm">No monthly fees</div></div>
+            </div>
+            <div class="flex gap-4 sm:gap-5">
+              <div class="text-3xl sm:text-4xl text-[#00ff9d]">02</div>
+              <div><div class="font-semibold">Works offline</div><div class="text-gray-400 text-sm">No internet needed</div></div>
+            </div>
+            <div class="flex gap-4 sm:gap-5">
+              <div class="text-3xl sm:text-4xl text-[#00ff9d]">03</div>
+              <div><div class="font-semibold">Your data stays yours</div><div class="text-gray-400 text-sm">Local storage only</div></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:col-span-7" data-aos="fade-left">
+          <div class="glass rounded-3xl overflow-hidden">
+            <table class="w-full text-left text-sm sm:text-base">
+              <thead>
+                <tr class="border-b border-white/10">
+                  <th class="py-6 px-6 sm:px-10 text-gray-400 font-medium">Feature</th>
+                  <th class="py-6 px-6 sm:px-10 text-center text-red-400 font-medium">Others</th>
+                  <th class="py-6 px-6 sm:px-10 text-center text-[#00ff9d] font-medium">ShalaConnect</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/10">
+                <tr><td class="py-5 px-6 sm:px-10">Internet Required</td><td class="text-center text-red-400">Yes</td><td class="text-center font-bold text-emerald-400">NO</td></tr>
+                <tr><td class="py-5 px-6 sm:px-10">Monthly Fees</td><td class="text-center text-red-400">Yes</td><td class="text-center font-bold text-emerald-400">NO</td></tr>
+                <tr><td class="py-5 px-6 sm:px-10">WhatsApp Alerts</td><td class="text-center text-red-400">Extra</td><td class="text-center font-bold text-emerald-400">Free</td></tr>
+                <tr><td class="py-5 px-6 sm:px-10">Data Location</td><td class="text-center text-red-400">Cloud</td><td class="text-center font-bold text-emerald-400">Your PC</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA + SHARE + DOWNLOAD -->
+  <section class="py-20 sm:py-28 bg-gradient-to-b from-[#05070f] to-black">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 text-center">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8">Ready to go digital?</h2>
+      <p class="text-lg sm:text-2xl text-gray-300 mb-8 sm:mb-12">Get demo + pricing → or download our brochure</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-5 sm:gap-8 mb-12 sm:mb-16">
+        <a href="https://wa.me/917829396954?text=Hello%20ShalaConnect%20Team%2C%20please%20send%20me%20the%20demo%20and%20pricing%20details%20for%20my%20school"
+           target="_blank" rel="noopener"
+           class="cta-button inline-flex items-center justify-center gap-4 bg-gradient-to-r from-[#00d4ff] to-[#00ff9d] text-black font-semibold text-xl sm:text-2xl px-10 sm:px-14 py-5 sm:py-7 rounded-2xl sm:rounded-3xl shadow-2xl shadow-[#00ff9d]/30">
+          <i class="fa-brands fa-whatsapp text-3xl sm:text-4xl"></i>
+          Message on WhatsApp
+        </a>
+
+        <button onclick="requestBrochurePassword()"
+                class="cta-button inline-flex items-center justify-center gap-4 bg-white/10 hover:bg-white/20 border border-white/30 font-semibold text-xl sm:text-2xl px-10 sm:px-14 py-5 sm:py-7 rounded-2xl sm:rounded-3xl backdrop-blur-sm transition-all">
+          <i class="fa-solid fa-file-arrow-down text-3xl sm:text-4xl"></i>
+          Download Brochure
+        </button>
+      </div>
+
+      <div class="flex flex-col items-center gap-4 mb-12">
+        <p class="text-gray-400">Share with other school owners</p>
+        <div class="flex gap-6 text-3xl">
+          <a href="https://wa.me/?text=Check%20out%20ShalaConnect%20–%20offline%20school%20management%20https://amitkadam.netlify.app/" target="_blank" class="hover:text-[#00ff9d]"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://twitter.com/intent/tweet?text=ShalaConnect%20-%20Offline%20school%20management%20system&url=https://amitkadam.netlify.app/" target="_blank" class="hover:text-[#00d4ff]"><i class="fa-brands fa-x-twitter"></i></a>
+          <button onclick="navigator.clipboard.writeText('https://amitkadam.netlify.app/'); alert('Link copied!')" class="hover:text-[#00ff9d]"><i class="fa-solid fa-link"></i></button>
+        </div>
+      </div>
+
+      <div class="text-sm text-gray-500">
+        Built by <a href="https://github.com/piyushkadam" target="_blank" class="hover:text-[#00d4ff]">Piyush Kadam</a> • 
+        <a href="https://amitkadam.netlify.app/" target="_blank" class="hover:text-[#00d4ff]">amitkadam.netlify.app</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 700, offset: 60 });
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar')?.classList.toggle('nav-scrolled', window.scrollY > 60);
+    });
+
+    // Real-time password: 12-hour format + minutes (padded to 4 digits)
+    // Examples: 1:23 PM → "0123",  9:05 AM → "0905",  12:45 PM → "1245"
+    function getCurrentPassword() {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      
+      // Convert 24h → 12h
+      hours = hours % 12;
+      if (hours === 0) hours = 12;  // midnight & noon become 12
+      
+      const hh = String(hours).padStart(2, '0');
+      return hh + minutes;
+    }
+
+    function requestBrochurePassword() {
+      const entered = prompt("Enter current 4-digit code to download brochure:\n\n(Changes every minute)");
+      
+      if (!entered) return;
+
+      const realPass = getCurrentPassword();
+
+      if (entered === realPass) {
+        // Replace with your REAL brochure PDF link
+        const brochureUrl = "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_HERE";
+        window.open(brochureUrl, '_blank');
+      } else {
+        alert(`Wrong code.\n\nThe code changes every minute.\nPlease try again.`);
+        setTimeout(requestBrochurePassword, 400);
+      }
+    }
+  </script>
+</body>
+</html>
