@@ -13,7 +13,7 @@
   No internet needed • One-time payment • Works on school's local network
 </p>
 
-
+---
 ## ✨ Features
 
 ### 💰 Smart Fees Management
@@ -305,5 +305,3 @@ This project is licensed under the MIT License.
   Made with ❤️ for Indian Schools 🇮🇳<br>
   <b>ShalaConnect — Empowering Indian Schools with Technology</b>
 </p>
-
-
